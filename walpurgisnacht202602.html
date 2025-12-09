@@ -1,199 +1,12 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <title>予言の書：2月の悲劇（ワルプルギスのカレンダー）＆黙示録分析</title>
-    <style>
-        /* 📜 基本的なスタイルと羊皮紙の背景 */
-        body {
-            font-family: 'Times New Roman', 'Yu Mincho', 'Hiragino Mincho ProN', serif;
-            /* background-color: #3e3e3e; /* 暗い背景 - 削除 */ */
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            line-height: 1.8;
-            margin: 0;
-            color: #3e2717;
-        }
-
-        .scroll-container {
-            width: 90%;
-            max-width: 1300px; /* テーブル幅の調整 */
-            background-color: #f7f1e5; /* 羊皮紙の色 */
-            border: 10px solid #7c5c37; /* 古い木の額縁 */
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7), inset 0 0 50px rgba(124, 92, 55, 0.5); /* 影と内側の装飾 */
-            padding: 50px 70px;
-            position: relative;
-            /* 古い紙のテクスチャを模倣 */
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200"><filter id="n" x="0" y="0"><feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="3" seed="0" result="t"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" fill="#f7f1e5"/><rect width="100%" height="100%" filter="url(#n)" opacity="0.4" fill="#a0825f"/></svg>');
-            background-blend-mode: multiply;
-        }
-
-        /* 👑 タイトルと章立て */
-        h1 {
-            font-family: Georgia, serif;
-            font-size: 2.5em;
-            text-align: center;
-            color: #3e2717; /* 深い茶色 */
-            border-bottom: 2px solid #a0825f;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-            letter-spacing: 2px;
-        }
-
-        h2 {
-            font-size: 1.8em;
-            color: #7c5c37;
-            text-align: center;
-            margin-top: 50px;
-            margin-bottom: 25px;
-            border-bottom: 1px dashed #7c5c37;
-            padding-bottom: 10px;
-            display: inline-block;
-            width: 100%;
-        }
-        
-        h3 {
-            font-size: 1.3em;
-            color: #8b0000; /* フェーズタイトルは赤系で */
-            margin-top: 30px;
-            margin-bottom: 15px;
-            border-left: 5px solid #8b0000;
-            padding-left: 15px;
-            background-color: rgba(139, 0, 0, 0.05);
-        }
-
-        /* 📜 本文のテーブルデザイン */
-        .calamity-table {
-            width: 100%;
-            border-collapse: collapse;
-            table-layout: fixed;
-            margin-top: 20px;
-            margin-bottom: 50px;
-        }
-
-        .calamity-table th, .calamity-table td {
-            border: 1px solid #a0825f; /* 古びた線の色 */
-            padding: 12px 8px;
-            vertical-align: top;
-            text-align: left;
-            font-size: 0.95em;
-        }
-
-        .calamity-table th {
-            background-color: #e6e0d4; /* ヘッダーを少し暗く */
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #5d4037;
-        }
-
-        /* 📅 日付セルの強調 */
-        .calamity-table td:nth-child(1) {
-            width: 6%;
-            font-size: 1.0em;
-            font-weight: bold;
-            color: #8b0000;
-            background-color: #fcf6ef;
-            text-align: center;
-            font-family: Georgia, serif; 
-        }
-
-        .calamity-table td:nth-child(2) { width: 4%; text-align: center; background-color: #fff8e8; }
-        .calamity-table td:nth-child(3) { width: 8%; font-weight: bolder; color: #006400; background-color: #f0fff0; text-align: center; }
-        .high-risk { color: #ffffff; background-color: #8b0000 !important; border: 1px solid #ff4500 !important; }
-        .calamity-table td:nth-child(4) { width: 15%; font-style: italic; }
-        .calamity-table td:nth-child(5) { width: 45%; }
-        .calamity-table td:nth-child(6) { width: 22%; font-size: 0.85em; background-color: #fff8e8; border-left: 2px dashed #d6c0a0; }
-
-        /* 📖 分析レポート用のスタイル */
-        .analysis-section {
-            padding: 20px 40px;
-            background-color: rgba(255, 255, 255, 0.4);
-            border: 1px solid #d6c0a0;
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
-        }
-
-        .analysis-text {
-            margin-bottom: 15px;
-            text-align: justify;
-        }
-
-        .analysis-list {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .analysis-item {
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 1px dotted #a0825f;
-        }
-
-        .analysis-date {
-            font-weight: bold;
-            color: #3e2717;
-            font-size: 1.1em;
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .bible-quote {
-            display: block;
-            font-style: italic;
-            color: #5d4037;
-            background-color: #eaddcf;
-            padding: 8px 15px;
-            margin: 5px 0 10px 0;
-            border-left: 3px solid #7c5c37;
-            font-size: 0.95em;
-        }
-
-        .interpretation {
-            font-weight: bold;
-            color: #2f4f4f; /* 解釈は深い青緑で知的に */
-        }
-
-        /* 📜 注意書き */
-        .note {
-            margin-top: 20px;
-            padding: 15px;
-            border: 1px solid #7c5c37;
-            background-color: #fff8e8;
-            font-size: 0.9em;
-            font-style: italic;
-            color: #5d4037;
-        }
-
-        .strong-warning {
-            color: #8b0000;
-            font-weight: bold;
-            font-size: 1.0em;
-            font-style: normal;
-        }
-        
-        hr.separator {
-            border: 0;
-            height: 1px;
-            background-image: linear-gradient(to right, rgba(124, 92, 55, 0), rgba(124, 92, 55, 0.75), rgba(124, 92, 55, 0));
-            margin: 50px 0;
-        }
-        
-        /* ⚠️ 2月24日の特別な警告スタイル */
-        .ultimate-warning {
-            color: #8b0000;
-            font-size: 1.2em;
-            border: 3px double #8b0000;
-            padding: 5px;
-            display: inline-block;
-            font-weight: bold;
-            margin-bottom: 10px;
-            background-color: #fff0f0;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>予言の書：2月の悲劇（ワルプルギスのカレンダー）＆黙示録分</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-color: #3e3e3e; background-image: url('backgroundimg.png')
+<body>
+
 <div class="scroll-container">
     <h1>予言の書：来たるべき厄災の暦</h1>
     <h2>怒れる二月（ワルプルギスのカレンダー）</h2>
@@ -398,15 +211,9 @@
                 <td><strong>feb. 24</strong></td>
                 <td>火</td>
                 <td class="high-risk">88%</td>
-                <td><strong style="color:#8b0000; font-size:1.05em;">ワルプルギスの夜襲来</strong></td>
-                <td>
-                    <span class="ultimate-warning">
-                        超危険、衝撃に備えよ
-                    </span>
-                    <br>
-                    人口密集地に近い**活断層**でマグニチュード7クラスの**直下型地震**が発生。ライフラインが広範囲で寸断され、広域的な支援が必要となる。
-                </td>
-                <td>1月17日（阪神・淡路大震災）が示した**都市直下型地震**の壊滅的な被害のリスクを反映。</td>
+                <td>大都市近郊の直下型地震</td>
+                <td>**活断層**でM7クラスの**直下型地震**が発生。ライフラインが広範囲で寸断。</td>
+                <td>1月17日が示した**都市直下型地震**の壊滅的な被害のリスクを反映。</td>
             </tr>
             <tr>
                 <td><strong>feb. 25</strong></td>
@@ -464,7 +271,7 @@
             <li class="analysis-item">
                 <span class="analysis-date">2月8日：太陽フレアと地磁気嵐</span>
                 <span class="bible-quote">黙示録 第4のラッパ（8:12）：「太陽の三分の一、月の三分の一、星の三分の一が打たれて暗くなる」</span>
-                <span class="interpretation">解釈：宇宙規模で進行する神の裁き。</span>
+                <span class="interpretation">解釈：現代インフラへの打撃として翻訳されているが、宇宙規模の「しるし」に相当。</span>
             </li>
             <li class="analysis-item">
                 <span class="analysis-date">2月13日：海底火山と変色する海</span>
@@ -497,7 +304,7 @@
         <p class="analysis-text">都市文明の崩壊と、世界のリセットを意味する最終的破局。</p>
         <ul class="analysis-list">
             <li class="analysis-item">
-                <span class="analysis-date">2月24日：ワルプルギスの夜襲来（大都市直下型地震）</span>
+                <span class="analysis-date">2月24日：大都市直下型地震</span>
                 <span class="bible-quote">黙示録 大いなる都の分裂（16:19）：「大いなる都は三つに裂かれ、諸国の民の町々は倒れた」</span>
                 <span class="interpretation">解釈：現代の「バビロン（繁栄した都市）」が神の怒りによって崩れ落ちる様を描写。</span>
             </li>
@@ -520,4 +327,3 @@
 
 </body>
 </html>
-
